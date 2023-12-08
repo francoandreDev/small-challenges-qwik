@@ -5,7 +5,7 @@ import { CardComponent as Card } from "./Card";
 
 export const CarrouselComponent = component$(({ totalCards }: propsCarrouselComponent) => {
     const currentPos = useSignal<number>(0);
-    const arrayComputed = useComputed$(() => new Array(totalCards).fill(0).map((o, i) => o = { pos: ((currentPos.value + i) % totalCards), id: Math.random(), index: i }))
+    const arrayComputed = useComputed$(() => new Array(totalCards).fill(0).map((_o, i) => _o = { pos: ((currentPos.value + i) % totalCards), id: Math.random(), index: i }))
 
     const previousCard = $(() => { currentPos.value = updateStart("previous", currentPos.value, totalCards) })
     const nextCard = $(() => { currentPos.value = updateStart("next", currentPos.value, totalCards) })
