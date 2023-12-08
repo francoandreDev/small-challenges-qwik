@@ -1,3 +1,4 @@
 export type propsCardComponent = {
-    position: number
+    position: number,
+    index: number
 }

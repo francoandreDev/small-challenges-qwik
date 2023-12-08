@@ -1,53 +1,64 @@
-.card-component {
+.card-component, .card-component-0 {
+    position: relative;
+    top: 0;
+    left: 0;
     transition: all 1s ease both;
     background: center / cover no-repeat;
-    position: relative;
-    inset: initial;
     width: auto;
     z-index: 2;
-    animation: show-card .6s ease both;
 }
 
-.card-component:first-of-type {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    width: 100vw;
-    border: none;
+.card-component {
+    transition: all 1s ease;
+    z-index: 3;
 }
 
 .card-component-0 {
-    background-image: url("https://images.unsplash.com/photo-1701600713431-01e520efca61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8");
-    order: 0
+    position: absolute;
+    z-index: 0;
+    order: 0;
+    animation: show-card .6s ease both;
 }
 
-.card-component-1 {
-    background-image: url("https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8");
-    order: 1
+.bg-0 {
+    background-image: url("https://e0.pxfuel.com/wallpapers/899/316/desktop-wallpaper-background-high-resolution-background-landscapes-nature-graphy-the.jpg");
 }
 
-.card-component-2 {
-    background-image: url("https://images.unsplash.com/photo-1701040851331-eef78742f488?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8");
-    order: 2
+.bg-1 {
+    background-image: url("https://www.wallpaperuse.com/wallp/69-695001_m.jpg");  
 }
 
-.card-component-3 {
-    background-image: url("https://images.unsplash.com/photo-1701713137683-7ef6f152a308?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D");
-    order: 3
+.bg-2 {
+    background-image: url("https://4.bp.blogspot.com/_O5sDA4ZEyIc/SxKWyCbfetI/AAAAAAAAIV8/AE80tvgY_XQ/s1600/Waves_post2.jpg");
 }
 
-.card-component-4 {
-    background-image: url("https://images.unsplash.com/photo-1701122399300-fa042c4a175a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D");
-    order: 4
+.bg-3{
+    background-image: url("https://1.bp.blogspot.com/-Y33yP0Y9Pbo/VPdvyQxAs2I/AAAAAAACiKg/7XABprKREbU/s1600/fondos%2Bde%2Bpaisajes%2Ben%2Balta%2Bresoluci%C3%B3n%2B(3).jpg");
+}
+
+.bg-4{
+    background-image: url("https://png.pngtree.com/background/20230608/original/pngtree-high-resolution-winter-wallpapers-picture-image_2904125.jpg");
+}
+
+.bg-5 {
+    background-image: url("https://media.gq.com.mx/photos/623f778c863c35ccea6ab1f4/16:9/w_2560%2Cc_limit/Solar_Orbiter%2520(1).jpg");
 }
 
 @keyframes show-card {
     from {
-        scale: 0;
         opacity: 0;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
     }
     to {
-        scale: 1;
         opacity: 1;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        translate: 0;
     }
 }
